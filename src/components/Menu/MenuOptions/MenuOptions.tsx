@@ -13,6 +13,7 @@ const MenuOptions = () => {
   return (
     <>
       <FordeerAdv />
+      <Api/>
       <AboutMenu />
       <ClearConversation />
       <ImportExportChat />
