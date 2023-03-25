@@ -3,6 +3,7 @@ import useStore from '@store/store';
 
 import Chat from '@components/Chat';
 import Menu from '@components/Menu';
+import ReactGA from "react-ga4";
 
 import useInitialiseNewChat from '@hooks/useInitialiseNewChat';
 import { ChatInterface } from '@type/chat';
@@ -16,6 +17,13 @@ function App() {
   const setCurrentChatIndex = useStore((state) => state.setCurrentChatIndex);
 
   useEffect(() => {
+
+
+    ReactGA.initialize([
+      {
+        trackingId: "G-MB3XP79MHW",
+      },
+    ]);
     // legacy local storage
     const oldChats = localStorage.getItem('chats');
     const apiKey = localStorage.getItem('apiKey');
